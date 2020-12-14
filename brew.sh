@@ -18,15 +18,8 @@ ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
-
-# Install `wget` with IRI support.
-brew install wget --with-iri
-
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
-
-# Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
@@ -39,8 +32,6 @@ brew install sfnt2woff-zopfli
 brew install woff2
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
-sudo cp -vf ${HOME}/dotfiles/fonts/DankMonoItalic.otf /Library/Fonts
-sudo cp -vf ${HOME}/dotfiles/fonts/DankMonoRegular.otf /Library/Fonts
 
 # Install other useful binaries.
 brew install git
