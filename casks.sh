@@ -19,3 +19,4 @@ brew cask install visual-studio-code
 brew cask install telegram
 brew cask install whatsapp
 brew cask install little-snitch
+brew cask install microsoft-office
