@@ -554,9 +554,6 @@ sudo pkill -HUP socketfilterfw
 # Disable auto captive portal
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control.plist Active -bool false
 
-# enable firevault
-sudo fdesetup enable
-
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
