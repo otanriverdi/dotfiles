@@ -6,7 +6,7 @@ brew cask install appcleaner
 brew cask install docker
 brew cask install firefox-developer-edition
 brew cask install gfxcardstatus
-brew cask install google-chrome
+brew cask install brave-browser
 brew cask install imageoptim
 brew cask install iterm2
 brew cask install notion

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Make vim the default editor.
+# Make VSCode the default editor.
 export EDITOR='code';
 
 # Enable persistent REPL history for `node`.
