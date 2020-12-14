@@ -6,7 +6,7 @@
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
-echo "Welcome, the script fill ask you for your password!"
+echo "Welcome, the script will ask you for your password!"
 
 # Ask for the administrator password upfront
 sudo -v
@@ -14,20 +14,7 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Install Homebrew
-echo "Installing Homebrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-echo "Installing/Updating brew utilities..."
-curl https://raw.githubusercontent.com/otanriverdi/dotfiles/main/brew.sh | bash
-
-echo "Installing common brew casks..."
-curl https://raw.githubusercontent.com/otanriverdi/dotfiles/main/casks.sh | bash
-
-# Install spaceship theme for oh-my-zsh
-echo "Installing the Spaceship theme for oh-my-zsh..."
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+xcode-select --install
 
 # Create `dev` directories
 echo "Creating the `~./dev` directories..."
@@ -35,22 +22,6 @@ cd ~
 rm -rf dev
 mkdir dev
 mkdir dev/otanriverdi
-
-echo "Installing node..."
-curl https://raw.githubusercontent.com/otanriverdi/dotfiles/main/node.sh | bash
-
-# Pull dotfiles repo and bootstrap
-echo "Pulling the dotfiles to bootstrap..."
-git clone https://github.com/otanriverdi/dotfiles && cd dotfiles && set -- -f; source bootstrap.sh
-
-echo "Generating an RSA token for GitHub..."
-cd ~
-mkdir -p ~/.ssh
-touch ~/.ssh/config
-ssh-keygen -t rsa -b 4096 -C "otrv@hey.com"
-echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa" | tee ~/.ssh/config
-eval "$(ssh-agent -s)"
-echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
 
 echo "Configuring system settings..."
 ###############################################################################
