@@ -20,3 +20,4 @@ brew cask install telegram
 brew cask install whatsapp
 brew cask install little-snitch
 brew cask install microsoft-office
+brew cask install iina

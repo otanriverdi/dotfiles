@@ -47,8 +47,6 @@ sudo cp -vf ${HOME}/dotfiles/fonts/DankMonoRegular.otf /Library/Fonts
 # Install other useful binaries.
 brew install git
 brew install gh
-brew install imagemagick --with-webp
-brew install tmux
 brew install tree
 
 # Remove outdated versions from the cellar.
