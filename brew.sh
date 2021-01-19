@@ -37,6 +37,7 @@ brew cask install font-fira-code
 brew install git
 brew install gh
 brew install tree
+brew install sqlite3
 
 # Remove outdated versions from the cellar.
 brew cleanup

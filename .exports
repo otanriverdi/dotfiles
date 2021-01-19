@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Make VSCode the default editor.
-export EDITOR='code';
-
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY=~/.node_history;
 # Allow 32³ entries; the default is 1000.
@@ -12,6 +9,12 @@ export NODE_REPL_MODE='sloppy';
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
+
+# Make Pip require virtualenv
+export PIP_REQUIRE_VIRTUALENV=true;
+
+# Export Deno path
+# export PATH="/Users/ozgurtanriverdi/.deno/bin:$PATH"
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';
@@ -36,4 +39,3 @@ export GPG_TTY=$(tty);
 # Homebrew specific
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
-export HOMEBREW_CASK_OPTS=--require-sha

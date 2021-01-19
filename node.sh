@@ -3,6 +3,8 @@
 # Install n and node lts
 curl -L https://git.io/n-install | bash
 
+source ~/.zshrc
+
 # Update npm
 npm i -g npm
 
