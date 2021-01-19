@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
 # Casks
-brew cask install appcleaner
-brew cask install docker
-brew cask install firefox
-brew cask install gfxcardstatus
-brew cask install google-chrome
-brew cask install imageoptim
-brew cask install iterm2
-brew cask install postman
-brew cask install slack
-brew cask install spotify
-brew cask install tableplus
-brew cask install the-unarchiver
-brew cask install visual-studio-code
-brew cask install telegram
-brew cask install whatsapp
-brew cask install iina
+brew install appcleaner --cask
+brew install docker --cask
+brew install firefox --cask
+brew install gfxcardstatus --cask
+brew install google-chrome --cask
+brew install imageoptim --cask
+brew install iterm2 --cask
+brew install postman --cask
+brew install slack --cask
+brew install spotify --cask
+brew install tableplus --cask
+brew install the-unarchiver --cask
+brew install visual-studio-code --cask
+brew install telegram --cask
+brew install whatsapp --cask
+brew install iina --cask
